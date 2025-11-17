@@ -7,7 +7,9 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminReportes from "./pages/admin/ReportesAsistencia";
 import ProfesorDashboard from "./pages/profesor/ProfesorDashboard";
+import ProfesorReportes from "./pages/profesor/ReportesAsistencia";
 import NotFound from "./pages/NotFound";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
@@ -33,6 +35,14 @@ const App = () => (
                 </ProtectedRoute>
               }
             />
+            <Route
+              path="/admin/reportes"
+              element={
+                <ProtectedRoute allowedRoles={['admin']}>
+                  <AdminReportes />
+                </ProtectedRoute>
+              }
+            />
             
             {/* Profesor Routes */}
             <Route
@@ -40,6 +50,14 @@ const App = () => (
               element={
                 <ProtectedRoute allowedRoles={['profesor']}>
                   <ProfesorDashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/profesor/reportes"
+              element={
+                <ProtectedRoute allowedRoles={['profesor']}>
+                  <ProfesorReportes />
                 </ProtectedRoute>
               }
             />
