@@ -57,6 +57,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        status: {
+          presente: "hsl(var(--status-presente))",
+          "presente-foreground": "hsl(var(--status-presente-foreground))",
+          falta: "hsl(var(--status-falta))",
+          "falta-foreground": "hsl(var(--status-falta-foreground))",
+          pendiente: "hsl(var(--status-pendiente))",
+          "pendiente-foreground": "hsl(var(--status-pendiente-foreground))",
+          justificada: "hsl(var(--status-justificada))",
+          "justificada-foreground": "hsl(var(--status-justificada-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
