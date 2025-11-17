@@ -31,6 +31,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   const profesorLinks = [
     { to: '/profesor', label: 'Dashboard', icon: '📊' },
     { to: '/profesor/asistencia', label: 'Tomar Asistencia', icon: '✓' },
+    { to: '/profesor/reportes', label: 'Reportes', icon: '📈' },
     { to: '/profesor/historial', label: 'Historial', icon: '📋' },
   ];
 
